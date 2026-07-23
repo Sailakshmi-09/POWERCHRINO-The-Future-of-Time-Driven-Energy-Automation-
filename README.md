@@ -1,5 +1,5 @@
 PowerChrono – The Future of Time-Driven Energy Automation
-->Project Overview:
+Project Overview:
 
 PowerChrono is an intelligent, time-based power management system developed using the LPC2148 microcontroller. The project is designed to 
 automate electrical devices based on predefined ON and OFF schedules, thereby optimizing energy usage,reducing power wastage, and improving operational reliability.
@@ -29,10 +29,10 @@ Hardware Requirements:
 
 Software Requirements:
 
-Embedded C Programming,
-Keil uVision IDE,
-Flash Magic,
-LPC2148 Header Files.
+* Embedded C Programming,
+* Keil uVision IDE,
+* Flash Magic,
+* LPC2148 Header Files.
 
 Block Diagram:
 
