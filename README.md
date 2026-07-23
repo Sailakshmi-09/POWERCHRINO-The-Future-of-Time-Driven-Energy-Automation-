@@ -7,13 +7,14 @@ The system continuously monitors the Real-Time Clock (RTC) and controls a connec
 
 Key Features:
 
-1.Real-time clock display on LCD.
-2.Automatic device control based on RTC schedule.
-3.User-friendly keypad-based editing.
-4.External interrupt-driven menu access.
-5.Custom LCD CGRAM symbols for bulb ON/OFF indication.
-6.Input validation for reliable operation.
-7.Modular code structure with separate drivers for LCD, Keypad, RTC, Delay, and Pin Configuration.
+* Displays real-time date and time on a 16x2 LCD.
+* Allows RTC settings modification using a 4x4 keypad.
+* Supports user-defined device ON and OFF scheduling.
+* Automatically controls the connected device based on RTC time.
+* Provides an interrupt-based menu for easy configuration.
+* Validates user inputs before updating RTC and schedule settings.
+* Uses custom LCD symbols to indicate device ON/OFF status.
+
 
 Hardware Requirements:
 
