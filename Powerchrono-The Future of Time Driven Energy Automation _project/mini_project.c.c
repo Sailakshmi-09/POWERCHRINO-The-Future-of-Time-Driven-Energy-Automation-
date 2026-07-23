@@ -107,6 +107,7 @@ label:cmdLCD(CLEAR_LCD);
 strLCD("1.EDITRTCINFO");
 cmdLCD(GOTO_LINE2_POS0);
 strLCD("2.E.ONOFFT 3.EXT");
+//read keypad input
 keyV=Keyscan();
 delay_ms(1000);
 cmdLCD(CLEAR_LCD);
@@ -123,6 +124,7 @@ delay_ms(1000);
 goto label;
 }
 }
+//set function for edit RTC
 void edit_RTC(void)
 {
 u32 keyV;
@@ -136,6 +138,7 @@ cmdLCD(CLEAR_LCD);
 switch(keyV)
 {
 case '1':
+	//edit hours
          h:ReadNum(&hour);
                       if(hour<1 || hour>23)
                       {
@@ -148,6 +151,7 @@ case '1':
                                         HOUR=hour;
           goto rtc;
 case '2':
+	//edit minutes
         m:ReadNum(&min);
          if(min<1 || min>59)
                      {
@@ -159,6 +163,7 @@ case '2':
 										 MIN=min;
            goto rtc;
 case '3':
+	//edit seconds
          s:ReadNum(&sec);
          if(sec>59)
                      {
@@ -171,6 +176,7 @@ case '3':
                          SEC=sec;
            goto rtc;
 case '4':
+	//edit day of week
          dow:cmdLCD(GOTO_LINE2_POS0+10);
                      ReadNum(&day);
                      if(day>6)
@@ -184,6 +190,7 @@ case '4':
                          DOW=day;
              goto rtc;
 case '5':
+	//edit day of month
         dom:cmdLCD(GOTO_LINE2_POS0);
          ReadNum(&date);
                      if(date<1 || date>31)
@@ -196,6 +203,7 @@ case '5':
                          DOM=date;
                      goto rtc;
 case '6':
+	//edit month
         mon:ReadNum(&month);
          if(month<1 ||month>12)
                      {
@@ -207,6 +215,7 @@ case '6':
                                  MONTH=month;
                            goto rtc;
 case '7':
+	//edit year
         y:ReadNum(&year);
           if(year>2035)
                      {
@@ -217,7 +226,7 @@ case '7':
                            }
                                  YEAR=year;
                            goto rtc;
-case '8':return;
+case '8':return;   //exit RTC editing
 default:cmdLCD(CLEAR_LCD);
 strLCD("invalid rtc");
 delay_ms(1000);
@@ -254,6 +263,7 @@ cmdLCD(CLEAR_LCD);
 goto label;
 }
 }
+//set on time function
 void setONtime(void)
 {
 onh:cmdLCD(CLEAR_LCD);
@@ -279,6 +289,7 @@ delay_ms(500);
 goto onmin;
 }
 }
+//set off time function
 void setOFFtime(void)
 {
 offh:cmdLCD(CLEAR_LCD);
