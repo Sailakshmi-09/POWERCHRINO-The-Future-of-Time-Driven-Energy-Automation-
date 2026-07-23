@@ -17,21 +17,21 @@ Key Features:
 
 Hardware Requirements:
 
-LPC2148 ARM7 Microcontroller
-16×2 LCD Display
-4×4 Matrix Keypad
-LED/Bulb (as the controlled device)
-Push Button Switch (for EINT0 interrupt)
-32.768 kHz RTC Crystal
-USB-UART Converter / DB-9 Cable
-Power Supply
+LPC2148 ARM7 Microcontroller,
+16×2 LCD Display,
+4×4 Matrix Keypad,
+LED/Bulb (as the controlled device),
+Push Button Switch (for EINT0 interrupt),
+32.768 kHz RTC Crystal,
+USB-UART Converter / DB-9 Cable,
+Power Supply.
 
 Software Requirements:
 
-Embedded C Programming
-Keil uVision IDE
-Flash Magic
-LPC2148 Header Files
+Embedded C Programming,
+Keil uVision IDE,
+Flash Magic,
+LPC2148 Header Files.
 
 Block Diagram:
 
