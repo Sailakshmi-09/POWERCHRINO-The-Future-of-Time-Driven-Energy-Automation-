@@ -56,6 +56,20 @@ Block Diagram:
         |      LCD      |      |    DEVICE     |
         +---------------+      +---------------+
 
+ Work Flow:
+
+1. Initialize LCD, Keypad, RTC, and External Interrupt.
+2. Read the current RTC time, date, and day continuously.
+3. Display RTC information on the LCD.
+4. Compare the current time with the user-defined ON/OFF schedule.
+5. Turn the device ON when the current time matches the ON time.
+6. Turn the device OFF when the current time matches the OFF time.
+7. Press the EINT0 switch to open the configuration menu.
+8. Edit RTC or ON/OFF timing settings using the keypad.
+9. Validate and update the entered values.
+10. Resume automatic device control based on the updated schedule.
+
+
  Applications:
 
 * Automatic street light control.
