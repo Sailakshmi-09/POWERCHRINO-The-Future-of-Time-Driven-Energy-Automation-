@@ -35,18 +35,35 @@ LPC2148 Header Files
 
 Block Diagram:
 
-                    +------------------+
-                    |       RTC        |
-                    +------------------+
-                             |
-                             v
-+------------+        +------------------+        +------------+
-|  KEYPAD    | -----> |     LPC2148      | -----> |    LCD     |
-+------------+        |  ARM7 MCU        |        +------------+
-                      |                  |
-+------------+        |                  |        +------------+
-|  SWITCH    | -----> |      EINT0       | -----> |   DEVICE   |
-+------------+        +------------------+        +------------+
+               +------------------+
+               |     KEYPAD       |
+               +------------------+
+                        |
+                        v
+        +--------------------------------+
+        |            LPC2148             |
+        |                                |
+        |      +------------------+      |
+        |      |       RTC        |      |
+        |      +------------------+      |
+        |                                |
+        |  EINT <---------------- SWITCH |
+        +--------------------------------+
+                |                    |
+                v                    v
+        +---------------+      +---------------+
+        |      LCD      |      |    DEVICE     |
+        +---------------+      +---------------+
+
+ Applications:
+
+* Automatic street light control.
+* Home and office appliance automation.
+* Industrial load scheduling and control.
+* Agricultural irrigation pump automation.
+* Energy-saving lighting systems.
+* Commercial building power management.
+
 
 
 
